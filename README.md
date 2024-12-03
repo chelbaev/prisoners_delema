@@ -1,17 +1,17 @@
 запуск самого cmake:
-cmake -S. -Bbuild  
-cmake --build build
 
-запуск main (не смотря на своё существование он крайне бесполезен):
-./build/BA_main
+cmake -S. bin  
+cmake --build bin
+
+запуск main:
+
+./bin/prisoners WoDT/WDT *count_of_step* *>=3 name_of_strategy*
+
+WDT - с детализацией
+
+WoDT - без детализации
+
+name_of_strategy - always_coop, always_betr, alternative_coop, and_coop, or_coop, random
 
 запуск гугл тестов:
-./build/tests/BA_test
-
-папка .vscode создаётся vscod-ом, не знаю что в ней
-папка build там много разных файлов из интересного только BA_main - само приложение и tests/BA_test - тесты
-папка lib - там лижит библиотека с классом BitArray
-папка tests - там лежат тесты
-main.cpp - само приложение
-
-P.S. я хотел сделать документацию, но я не знаю как она делается, я обещаю вам её сделать как только вы мне скажите как это вообще делается
+./bin/test/test_app
